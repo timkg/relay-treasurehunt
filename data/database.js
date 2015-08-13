@@ -22,7 +22,7 @@ var hidingSpots = [];
   for (var i = 0; i < 9; i++) {
     hidingSpot = new HidingSpot();
     hidingSpot.id = `${i}`;
-    hidingSpot.hasTreasue = (i === indexOfSpotWithTreasure);
+    hidingSpot.hasTreasure = (i === indexOfSpotWithTreasure);
     hidingSpot.hasBeenChecked = false;
     hidingSpots.push(hidingSpot);
   }
@@ -31,7 +31,7 @@ var hidingSpots = [];
 var turnsRemaining = 3;
 
 export function checkHidingSpotForTreasure(id) {
-  if (hidingSpots.some(hs => hs.hasTreasue && hs.hasBeenChecked)) {
+  if (hidingSpots.some(hs => hs.hasTreasure && hs.hasBeenChecked)) {
     return;
   }
   turnsRemaining--;
